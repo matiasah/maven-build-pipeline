@@ -57,11 +57,17 @@ def call(Map propertyMap) {
                         - mountPath: "/.m2/repository"
                           name: "m2-volume"
                           readOnly: false
+                        - mountPath: "/.npm"
+                          name: "npm-volume"
+                          readOnly: false
                       serviceAccountName: jenkins-slave
                       volumes:
                       - emptyDir:
                           medium: ""
                         name: "m2-volume"
+                      - emptyDir:
+                          medium: ""
+                        name: "npm-volume"
                 """
             }
         }
