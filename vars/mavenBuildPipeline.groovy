@@ -53,7 +53,15 @@ def call(Map propertyMap) {
                         name: "maven"
                         resources: {}
                         tty: true
+                        volumeMounts:
+                        - mountPath: "/.m2/repository"
+                          name: "m2-volume"
+                          readOnly: false
                       serviceAccountName: jenkins-slave
+                      volumes:
+                      - emptyDir:
+                          medium: ""
+                        name: "m2-volume"
                 """
             }
         }
