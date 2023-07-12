@@ -68,7 +68,7 @@ def call(Map propertyMap) {
     
                         script {
 
-                            dir(currentDirectory) {
+                            dir(propertyMap.currentDirectory) {
 
                                 // Build
                                 sh "mvn clean install -DskipTests"
@@ -91,7 +91,7 @@ def call(Map propertyMap) {
     
                         script {
 
-                            dir(currentDirectory) {
+                            dir(propertyMap.currentDirectory) {
 
                                 // Test
                                 sh "mvn test"
