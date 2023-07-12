@@ -60,6 +60,9 @@ def call(Map propertyMap) {
                         - mountPath: "/.npm"
                           name: "npm-volume"
                           readOnly: false
+                        - mountPath: "/.embedmongo"
+                          name: "embedmongo"
+                          readOnly: false
                       serviceAccountName: jenkins-slave
                       volumes:
                       - emptyDir:
@@ -68,6 +71,9 @@ def call(Map propertyMap) {
                       - emptyDir:
                           medium: ""
                         name: "npm-volume"
+                      - emptyDir:
+                          medium: ""
+                        name: "embedmongo"
                 """
             }
         }
