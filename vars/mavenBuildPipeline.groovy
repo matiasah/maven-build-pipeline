@@ -48,7 +48,7 @@ def call(Map propertyMap) {
                       containers:
                       - command:
                         - "cat"
-                        image: "maven:3-amazoncorretto-11"
+                        image: "maven:3-amazoncorretto-17"
                         imagePullPolicy: "IfNotPresent"
                         name: "maven"
                         resources: {}
