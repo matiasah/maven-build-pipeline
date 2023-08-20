@@ -83,6 +83,24 @@ def call(Map propertyMap) {
 
         stages {
 
+            stage ("Prep") {
+
+                steps {
+
+                    container ("maven") {
+    
+                        script {
+
+                            sh "env"
+
+                        }
+
+                    }
+
+                }
+
+            }
+
             stage ("Build") {
 
                 steps {
