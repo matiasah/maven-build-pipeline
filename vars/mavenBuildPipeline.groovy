@@ -53,6 +53,9 @@ def call(Map propertyMap) {
                         name: "maven"
                         resources: {}
                         tty: true
+                        env:
+                        - name: "EMBEDDED_MONGO_ARTIFACTS"
+                          value: "/.embedmongo"
                         volumeMounts:
                         - mountPath: "/.m2/repository"
                           name: "m2-volume"
