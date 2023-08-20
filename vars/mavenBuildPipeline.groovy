@@ -56,6 +56,8 @@ def call(Map propertyMap) {
                         env:
                         - name: "EMBEDDED_MONGO_ARTIFACTS"
                           value: "/.embedmongo"
+                        - name: "ImageOS"
+                          value: "ubuntu22"
                         volumeMounts:
                         - mountPath: "/.m2/repository"
                           name: "m2-volume"
