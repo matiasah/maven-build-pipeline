@@ -114,7 +114,7 @@ def call(Map propertyMap) {
                             dir(propertyMap.currentDirectory) {
 
                                 // Build
-                                sh "mvn clean install -DskipTests"
+                                sh "mvn clean install -DskipTests -Djar.finalName=application.jar"
 
                             }
 
